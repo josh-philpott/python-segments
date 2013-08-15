@@ -15,7 +15,7 @@ class weather():
 
 	def report_string(self, city, state):
 
-		the_url = self.api_url + self.wu_key + 'conditions/q/' + state.replace(" ", "_") + "/" + city.replace(" ", "_") + '.json'
+		the_url = self.api_url + self.wu_key + 'conditions/q/' + state + "/" + city.replace(" ", "_") + '.json'
 		response = urllib2.urlopen(the_url)
 		json_data = response.read()
 		data = json.loads(json_data)
